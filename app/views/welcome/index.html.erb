@@ -470,6 +470,7 @@
     var monthF = dF.getMonth();
     var yearF = dF.getFullYear();
     
+    //Cuando realizamos una nueva consulta debemos borrar los cambios anteriores en el html
     $("#line-chart-dolar").html("");
     $("#line-chart-uf").html("");
     $("#line-chart-tmc").html("");
@@ -512,7 +513,7 @@
           valorD = valorD.replace(",", ".");
           value.Valor = valorD;
           if(fecha >= dI && fecha <= dF){
-            console.log("HOLAFECHA");
+            
             if (parseFloat(value.Valor) > maxDolar) {maxDolar = parseFloat(value.Valor)};
             if (parseFloat(value.Valor) < minDolar) {minDolar = parseFloat(value.Valor)};
             promDolar+=parseFloat(value.Valor);
@@ -524,7 +525,6 @@
         $("#dolar-max").append("$"+maxDolar);
         $("#dolar-min").append("$"+minDolar);
         $("#dolar-prom").append("$"+parseFloat(promDolar/iD));
-        console.log(dataDolar);
         // LINE CHART
         var line_dolar = new Morris.Line({
           element: 'line-chart-dolar',
@@ -565,7 +565,7 @@
             $("#uf-max").append("$"+maxUF);
             $("#uf-min").append("$"+minUF);
             $("#uf-prom").append("$"+parseFloat(promUF/iUF));
-            console.log(dataUF);
+            
             // LINE CHART
             var line_uf = new Morris.Line({
               element: 'line-chart-uf',
@@ -694,7 +694,7 @@
 
                 
                 
-                console.log(dataTMC);
+                
                 // LINE CHART
                 Morris.Line({
                   element: 'line-chart-tmc',

@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+![Cumplo Logo](/app/assets/images/logo.png)
+#Tarea de Cumplo | Patricio Valderrama
+
+## Algunos problemas
+Uno de los problemas que tuve fue que la página del SBIF no reconocía algunas consultas que salían descritas en su documentación, pero pude solucionarlo recorriendo el JSON de una consulta mas grande.
+
+![SBIF error](/app/assets/images/error.png)
