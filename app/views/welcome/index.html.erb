@@ -1,2 +1,395 @@
-<h1>Hola</h1>
-<%= @parsed %>
+<!-- /.col (left) -->
+<div class="col-md-12">
+  <div class="box box-primary">
+    <div class="box-header">
+      <h3 class="box-title">Filtro por Fecha</h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Date -->
+          <div class="form-group">
+            <label>Fecha de Inicio:</label>
+
+            <div class="input-group date">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right" id="datepicker">
+            </div>
+            <!-- /.input group -->
+          </div>
+          <!-- /.form group -->
+        </div>
+        <div class="col-md-6">
+          <!-- Date -->
+          <div class="form-group">
+            <label>Fecha de Término:</label>
+
+            <div class="input-group date">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right" id="datepicker2">
+            </div>
+            <!-- /.input group -->
+          </div>
+          <!-- /.form group -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- /.col (left) -->
+<div class="col-md-12">
+<!-- LINE CHART -->
+  <div class="box box-info">
+    <div class="box-header with-border">
+      <h3 class="box-title">Valor del Dolar</h3>
+    </div>
+    <div class="box-body chart-responsive">
+      <div class="row">
+        <div class="col-md-8">
+          <p class="text-center">
+            <strong>Valor del Dolar</strong>
+          </p>
+          <div class="chart" id="line-chart-dolar" style="height: 300px;"></div>
+        </div>
+        <div class="col-md-4">
+          <p class="text-center">
+            <strong>Datos históricos</strong>
+          </p>
+          <div class="direct-chat-messages">
+            <dl class="dl-horizontal" id="data-dolar">
+              
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+      <div class="row">
+        <div class="col-sm-4 col-xs-4">
+          <div class="description-block border-right">
+            <span class="description-percentage text-green" id="dolar-max"></span>
+            <span class="description-text">VALOR MÁXIMO</span>
+          </div>
+          <!-- /.description-block -->
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 col-xs-4">
+          <div class="description-block border-right">
+            <span class="description-percentage text-red" id="dolar-min"></span>
+            <span class="description-text">VALOR MÍNIMO</span>
+          </div>
+          <!-- /.description-block -->
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 col-xs-4">
+          <div class="description-block border-right">
+            <span class="description-percentage text-yellow" id="dolar-prom"></span>
+            <span class="description-text">PROMEDIO</span>
+          </div>
+          <!-- /.description-block -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+  </div>
+  <!-- /.box -->
+</div>
+
+<!-- /.col (left) -->
+<div class="col-md-12">
+<!-- LINE CHART -->
+  <div class="box box-info">
+    <div class="box-header with-border">
+      <h3 class="box-title">Valor del UF</h3>
+    </div>
+    <div class="box-body chart-responsive">
+      <div class="row">
+        <div class="col-md-8">
+          <p class="text-center">
+            <strong>Valor del UF</strong>
+          </p>
+          <div class="chart" id="line-chart-uf" style="height: 300px;"></div>
+        </div>
+        <div class="col-md-4">
+          <p class="text-center">
+            <strong>Datos históricos</strong>
+          </p>
+          <div class="direct-chat-messages">
+            <dl class="dl-horizontal" id="data-uf">
+              
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+      <div class="row">
+        <div class="col-sm-4 col-xs-4">
+          <div class="description-block border-right">
+            <span class="description-percentage text-green" id="uf-max"></span>
+            <span class="description-text">VALOR MÁXIMO</span>
+          </div>
+          <!-- /.description-block -->
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 col-xs-4">
+          <div class="description-block border-right">
+            <span class="description-percentage text-red" id="uf-min"></span>
+            <span class="description-text">VALOR MÍNIMO</span>
+          </div>
+          <!-- /.description-block -->
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 col-xs-4">
+          <div class="description-block border-right">
+            <span class="description-percentage text-yellow" id="uf-prom"></span>
+            <span class="description-text">PROMEDIO</span>
+          </div>
+          <!-- /.description-block -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+  </div>
+  <!-- /.box -->
+</div>
+
+<!-- /.col (left) -->
+<div class="col-md-12">
+<!-- LINE CHART -->
+  <div class="box box-info">
+    <div class="box-header with-border">
+      <h3 class="box-title">Valor del Tasa Máxima Convencional</h3>
+    </div>
+    <div class="box-body chart-responsive">
+      <div class="row">
+        <div class="col-md-8">
+          <p class="text-center">
+            <strong>Valor del TMC</strong>
+          </p>
+          <div class="chart" id="line-chart-tmc" style="height: 300px;"></div>
+        </div>
+        <div class="col-md-4">
+          <p class="text-center">
+            <strong>Datos históricos</strong>
+          </p>
+          <div class="direct-chat-messages">
+            <dl class="dl-horizontal" id="data-tmc">
+              
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+      <div class="row">
+        <div class="col-sm-4 col-xs-4">
+          <div class="description-block border-right">
+            <span class="description-percentage text-green" id="tmc-max"></span>
+            <span class="description-text">VALOR MÁXIMO</span>
+          </div>
+          <!-- /.description-block -->
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 col-xs-4">
+          <div class="description-block border-right">
+            <span class="description-percentage text-red" id="tmc-min"></span>
+            <span class="description-text">VALOR MÍNIMO</span>
+          </div>
+          <!-- /.description-block -->
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 col-xs-4">
+          <div class="description-block border-right">
+            <span class="description-percentage text-yellow" id="tmc-prom"></span>
+            <span class="description-text">PROMEDIO</span>
+          </div>
+          <!-- /.description-block -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+  </div>
+  <!-- /.box -->
+</div>
+
+
+
+<script type="text/javascript">
+  //Date picker Inicio
+  $('#datepicker').datepicker({
+    autoclose: true,
+  })
+  //Date picker Termino
+  $('#datepicker2').datepicker({
+    autoclose: true
+  })
+
+  
+</script>
+
+<script type="text/javascript">
+
+  $("#datepicker").on("change", function(){
+    var fechaInicio = $("#datepicker").val();
+    var fechaFin = $("#datepicker2").val();
+    intervalo(fechaInicio, fechaFin);
+  });
+
+  $("#datepicker2").on("change", function(){
+    var fechaInicio = $("#fechaInicio").val();
+    var fechaFin = $("#fechaFin").val();
+    intervalo(fechaInicio, fechaFin);
+  });
+
+  function intervalo(fechaInicio, fechaFin){
+    var dataDolar = [];
+    var dataUF = [];
+    var dataTMC = [];
+
+    var dI = new Date(fechaInicio);
+    var dF = new Date(fechaFin);
+    var dayI = dI.getDate();
+    var monthI = dI.getMonth();
+    var yearI = dI.getFullYear();
+    var dayF = dF.getDate();
+    var monthF = dF.getMonth();
+    var yearF = dF.getFullYear();
+    
+    $("#line-chart").html("");
+    $("#data-dolar").html("");
+
+    $.ajax({
+      url: 'http://api.sbif.cl/api-sbifv3/recursos_api/dolar/posteriores/'+(yearI-1)+'?apikey=b8124793da9ca97350a3be40583dd49e1c07e51c&formato=json',
+      type:  'get',
+      success:  function (responseDolar) {
+        data = responseDolar['Dolares'];
+        maxDolar = 0;
+        minDolar = 10000;
+        promDolar = 0;
+        iD=0;
+
+        $.each(data, function(index, value){
+          fecha = new Date(value['Fecha']);
+          if(fecha >= dI && fecha <= dF){
+            if (parseFloat(value.Valor) > maxDolar) {maxDolar = parseFloat(value.Valor)};
+            if (parseFloat(value.Valor) < minDolar) {minDolar = parseFloat(value.Valor)};
+            promDolar+=parseFloat(value.Valor);
+            iD++;
+            dataDolar.push(value);
+            $("#data-dolar").append("<dt>"+fecha.toLocaleFormat('%d-%m-%Y') +"</dt><dd>$"+ parseFloat(value.Valor) +"</dd>");
+          }
+        });
+        $("#dolar-max").append("$"+maxDolar);
+        $("#dolar-min").append("$"+minDolar);
+        $("#dolar-prom").append("$"+parseFloat(promDolar/iD));
+        console.log(dataDolar);
+        // LINE CHART
+        var line_dolar = new Morris.Line({
+          element: 'line-chart-dolar',
+          resize: true,
+          data: dataDolar,
+          xkey: 'Fecha',
+          ykeys: ['Valor'],
+          labels: ['Valor'],
+          lineColors: ['#3c8dbc'],
+          hideHover: 'auto'
+        });
+        $.ajax({
+          url: 'http://api.sbif.cl/api-sbifv3/recursos_api/uf/posteriores/'+(yearI-1)+'?apikey=b8124793da9ca97350a3be40583dd49e1c07e51c&formato=json',
+          type:  'get',
+          success:  function (responseUF) {
+            data = responseUF['UFs'];
+            maxUF = 0;
+            minUF = 10000000;
+            promUF = 0;
+            iUF=0;
+
+            $.each(data, function(index, value){
+              fecha = new Date(value['Fecha']);
+              if(fecha >= dI && fecha <= dF){
+                if (parseFloat(value.Valor) > maxDolar) {maxDolar = parseFloat(value.Valor)};
+                if (parseFloat(value.Valor) < minDolar) {minDolar = parseFloat(value.Valor)};
+                promUF+=parseFloat(value.Valor);
+                iUF++;
+                dataUF.push(value);
+                $("#data-uf").append("<dt>"+fecha.toLocaleFormat('%d-%m-%Y') +"</dt><dd>$"+ parseFloat(value.Valor) +"</dd>");
+              }
+            });
+            $("#uf-max").append("$"+maxUF);
+            $("#uf-min").append("$"+minUF);
+            $("#uf-prom").append("$"+parseFloat(promDolar/iD));
+            console.log(dataUF);
+            // LINE CHART
+            var line_uf = new Morris.Line({
+              element: 'line-chart-uf',
+              resize: true,
+              data: dataUF,
+              xkey: 'Fecha',
+              ykeys: ['Valor'],
+              labels: ['Valor'],
+              lineColors: ['#3c8dbc'],
+              hideHover: 'auto'
+            });
+            $.ajax({
+              url: 'http://api.sbif.cl/api-sbifv3/recursos_api/tmc/posteriores/'+(yearI-1)+'?apikey=b8124793da9ca97350a3be40583dd49e1c07e51c&formato=json',
+              type:  'get',
+              success:  function (responseTMC) {
+                data = responseTMC['TMCs'];
+                maxTMC = 0;
+                minTMC = 10000;
+                promTMC = 0;
+                iTMC=0;
+
+                $.each(data, function(index, value){
+                  fecha = new Date(value['Fecha']);
+                  if(fecha >= dI && fecha <= dF){
+                    if (parseFloat(value.Valor) > maxDolar) {maxDolar = parseFloat(value.Valor)};
+                    if (parseFloat(value.Valor) < minDolar) {minDolar = parseFloat(value.Valor)};
+                    promTMC+=parseFloat(value.Valor);
+                    iTMC++;
+                    dataTMC.push(value);
+                    $("#data-tmc").append("<dt>"+fecha.toLocaleFormat('%d-%m-%Y') +"</dt><dd>$"+ parseFloat(value.Valor) +"</dd>");
+                  }
+                });
+                $("#tmc-max").append(maxTMC+"%");
+                $("#tmc-min").append(minTMC+"%");
+                $("#tmc-prom").append(parseFloat(promTMC/iTMC)+"%");
+                console.log(dataTMC);
+                // LINE CHART
+                var line_tmc = new Morris.Line({
+                  element: 'line-chart-tmc',
+                  resize: true,
+                  data: dataTMC,
+                  xkey: 'Fecha',
+                  ykeys: ['Valor'],
+                  labels: ['Valor'],
+                  lineColors: ['#3c8dbc'],
+                  hideHover: 'auto'
+                });
+              },
+              dataType: "json",
+              async : true
+            });
+          },
+          dataType: "json",
+          async : true
+        });
+      },
+      dataType: "json",
+      async : true
+    });
+  }
+</script>
