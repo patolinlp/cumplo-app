@@ -487,7 +487,12 @@
     $("#data-tmc10").html("");
     $("#data-tmc11").html("");
     $("#data-tmc12").html("");
-    
+    $("#dolar-max").html("");
+    $("#dolar-min").html("");
+    $("#dolar-prom").html("");
+    $("#uf-max").html("");
+    $("#uf-min").html("");
+    $("#uf-prom").html("");
 
     $.ajax({
       url: 'http://api.sbif.cl/api-sbifv3/recursos_api/dolar/posteriores/'+(yearI-1)+'?apikey=b8124793da9ca97350a3be40583dd49e1c07e51c&formato=json',
